@@ -1,3 +1,11 @@
+# 使用git lfs上传大文件
+# before_install:
+# https://github.com/RS485/LogisticsPipes/blob/dev/jitpack.yml
+  # - git lfs install
+  # - git lfs fetch
+  # - git lfs checkout
+# https://github.com/jitpack/jitpack.io/issues/3905
+  # - git lfs pull
 install:
 - FILE="-Dfile=libs/geckoview-arm64-v8a-124.0.20240311145044.aar"
 - mvn install:install-file $FILE -DgroupId=com.github.fulus06 -DartifactId=geckoview-lib -Dversion=arm64-v8a-124.0.2024031401 -Dpackaging=aar -DgeneratePom=true
